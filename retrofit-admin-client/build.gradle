@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+dependencies {
+
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
+    compile ('com.github.tomakehurst:wiremock:1.55') {
+        exclude group: 'org.json', module: 'json'
+        exclude group:'org.mortbay.jetty',module:'jetty'
+        //exclude group:'com.fasterxml.jackson.core',module:'jackson-core'
+        //exclude group:'com.fasterxml.jackson.core',module:"jackson-annotations"
+        //exclude group:'com.fasterxml.jackson.core',module:'jackson-databind'
+        //exclude group:'org.skyscreamer',module:'jsonassert'
+        exclude group:'xmlunit',module:'xmlunit'
+        exclude group:'com.jayway.jsonpath',module:'json-path'
+        exclude group:'net.sf.jopt-simple',module:'jopt-simple'
+        exclude group:'org.apache.httpcomponents',module:'httpclient'
+        //exclude group:'com.google.guava',module:'guava'
+    }
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
