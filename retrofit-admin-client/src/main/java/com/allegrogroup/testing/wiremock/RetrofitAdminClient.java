@@ -12,6 +12,7 @@ import com.github.tomakehurst.wiremock.admin.GetRequestCountTask;
 import com.github.tomakehurst.wiremock.admin.GlobalSettingsUpdateTask;
 import com.github.tomakehurst.wiremock.admin.NewStubMappingTask;
 import com.github.tomakehurst.wiremock.admin.RequestSpec;
+import com.github.tomakehurst.wiremock.admin.ResetRequestsTask;
 import com.github.tomakehurst.wiremock.admin.ResetScenariosTask;
 import com.github.tomakehurst.wiremock.admin.ResetTask;
 import com.github.tomakehurst.wiremock.admin.ResetToDefaultMappingsTask;
@@ -89,6 +90,11 @@ public class RetrofitAdminClient implements Admin {
     @Override
     public void resetMappings() {
         postJsonAssertOkAndReturnBody(urlFor(ResetTask.class), null, HTTP_OK);
+    }
+
+    @Override
+    public void resetRequests() {
+        postJsonAssertOkAndReturnBody(urlFor(ResetRequestsTask.class), null, HTTP_OK);
     }
 
     @Override

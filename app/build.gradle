@@ -52,6 +52,5 @@ dependencies {
     androidTestCompile('com.android.support:multidex-instrumentation:1.0.1')
     androidTestCompile 'com.android.support.test:rules:0.2'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.1'
-    //androidTestCompile 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
     androidTestCompile project(':retrofit-admin-client')
 }
